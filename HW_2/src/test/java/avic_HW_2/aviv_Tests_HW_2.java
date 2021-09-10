@@ -40,7 +40,7 @@ public class aviv_Tests_HW_2 {
     }
 
 
-    @Test(priority = 2)// страница apple store загружена
+    @Test(priority = 2)
     public void checkThanCatalogueOfAppleStoreIsOpened() {
         driver.get("https://avic.ua/apple-store");
         waitForElementLocateBy(driver, By.xpath("//h1[(@class='page-title' and text()='Apple Store')]"));
@@ -49,7 +49,7 @@ public class aviv_Tests_HW_2 {
 
     }
 
-    @Test(priority = 3)//проверка количества карточек товаров на странице
+    @Test(priority = 3)
     public void checkOfCountOfProductsOnThePage() {
         driver.get("https://avic.ua/apple-store");
         waitForElementLocateBy(driver, By.xpath("//div[(@class='brand-box__title')]//a[(@href= 'https://avic.ua/macbook')]")).click();
@@ -94,22 +94,4 @@ public class aviv_Tests_HW_2 {
     }
 
 }
-  /*
-
-    //div[contains(@class, 'open-cat')]//span[@class='sidebar-item']  - кнопка каталог товаров
-    //div[(@class='menu-lvl first-level')]//a[contains(@href, 'apple-store')] - меню apple store
-    https://avic.ua/apple-store - страница Apple Store
-
-    <h1 class="page-title">Apple Store</h1> - заголовок страницы Apple Store
-
-
-    //div[(@class='brand-box__title')]//a[(@href= 'https://avic.ua/macbook')] - текстовая ссылка на раздел с макбуками
-    https://avic.ua/macbook - адрес страницы  с макбуками
-
-
-    //div[contains(@class,'prod-cart')]//a[(@class= 'prod-cart__buy')][1] - поле "купить" первой из 12 карточек товара
-    //div[(@class='btns-cart-holder')]//a[text()= ' Продолжить покупки'] - кнопка продолжить покупки
-    //div[(@class='active-cart-item js_cart_count')] - счеткик товаров в корзине
-
-
-*/
+  
